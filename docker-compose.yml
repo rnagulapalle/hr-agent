@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  hr-agent:
+    build: .
+    environment:
+      ANTHROPIC_API_KEY: "${ANTHROPIC_API_KEY}"
+      ANTHROPIC_MODEL: "claude-sonnet-4-5"
+      LANGSMITH_API_KEY: "${LANGSMITH_API_KEY}"
+      LANGSMITH_TRACING: "true"
+      LANGSMITH_PROJECT: "hr-workflow-agent"
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./chroma_hr:/app/chroma_hr

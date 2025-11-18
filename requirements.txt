@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+langchain>=0.3.0
+langgraph>=0.2.0
+langsmith
+langchain-anthropic>=0.2.0
+langchain-community
+chromadb
+tiktoken
+python-dotenv
+fastembed
+langchain-text-splitters
+
